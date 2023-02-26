@@ -38,10 +38,36 @@ const musaJambScores = jambScores(70, 85, 82, 94);
 musa.jambScores = musaJambScores;
 
 //Question 4
+//Option 1 - Using Oject.assign
+const profile = {
+    firsName: 'Busolami',
+    lastName: 'Oluwabi',
+    age: 20,
+    courseOfStudy: 'Chemistry and Education',
+    Year: '3rd Year'
+}
+const profile2 = Object.assign({}, profile)
 
+profile2.firsName = "Fadekemi";
+profile2.lastName = "Ajose";
+profile2.courseOfStudy = 'Food Science And Technology';
 
+console.log(profile);
+console.log(profile2);
 
-//Question 5
+//4aii) Using spread Synax
+const profile3 = {...profile };
+profile3.courseOfStudy = 'Law';
+profile3.Year = '500 Level';
+profile3.firsName = 'Omolola';
+
+console.log(profile3);
+
+const profile4 = JSON.parse(JSON.stringify(profile));
+profile4.firsName = 'Grace';
+profile4.Year = '200 Level';
+profile4.courseOfStudy = 'Nursing Science'
+    //Question 5
 const presidentialCandidates = {
     AAC: 'Omoyele Sowore',
     ACCORD: 'Christopher Imumolen',
